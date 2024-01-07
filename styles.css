@@ -16,13 +16,19 @@
   box-sizing: border-box;
 }
 
+
+body {
+  background-color: #1d1d1d;
+  color: #cfb290;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-}
 
 nav {
   width: 100%;
@@ -66,6 +72,7 @@ nav .checkbox i {
 }
 
 ul {
+  background-color: var(--secondary-color);
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -91,9 +98,12 @@ ul li a:hover {
 }
 
 .section__container {
-  min-height: 100vh;
+  height:auto;
   max-width: var(--max-width);
-  margin: auto;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
   padding: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -150,7 +160,7 @@ ul li a:hover {
 
 .hire__me {
   background-color: var(--primary-color);
-  color: #ffffff;
+  color: var(--extra-light);
 }
 
 .hire__me:hover {
@@ -182,12 +192,12 @@ ul li a:hover {
   }
 
   ul {
-    position: absolute;
+    position:absolute;
     width: 100%;
     height: calc(100vh - 85px);
     left: -100%;
     top: 85px;
-    background-color: var(--extra-light);
+    background-color: var(--secondary-color);
     flex-direction: column;
     justify-content: center;
     gap: 3rem;
@@ -225,7 +235,7 @@ ul li a:hover {
 
 .card-wrap {
   position: relative;
-  margin: 1.7rem 0.8rem;
+  margin: 1rem 0.8rem;
 }
 
 .card {
@@ -234,13 +244,13 @@ ul li a:hover {
   position: relative;
   width: 100%;
   max-width: 390px;
-  min-height: 520px;
+  height: 400px;
   background-color: var(--secondary-color);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 3rem 2rem;
+  padding: 1rem 1rem;
   overflow: hidden;
   transition: 0.3s;
 }
@@ -251,6 +261,9 @@ ul li a:hover {
   color: var(--secondary-color);
 }
 
+.skill_title{
+margin-top: 30px;
+}
 .title2 {
   font-size: 2.5rem;
   font-weight: 400;
@@ -260,7 +273,7 @@ ul li a:hover {
   text-align: center;
 }
 .text2 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 3rem;
   color: var(--secondary-color);
@@ -299,12 +312,13 @@ ul li a:hover {
   height: 8px;
 }
 
-.icon {
+.icon1 {
   width: 90px;
   margin-bottom: 1.7rem;
 }
 
 .card .title-sm {
+  font-size: 25px;
   line-height: 0.8;
 }
 
@@ -327,87 +341,10 @@ ul li a:hover {
   opacity: 0.2;
   pointer-events: none;
 }
-
-.about {
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  overflow: hidden;
-}
-
-.about img {
-  max-width: 600px;
-}
-
-.about .text {
-  color: var(--secondary-color);
-  margin-top: 1rem;
-}
-
-.skills {
-  text-align: center;
-  word-spacing: 20px;
-  margin: 1.5rem 0 2.5rem 0;
-}
-
-.skill {
-  display: inline-flex;
-  margin: 1rem 0;
-}
-
-.skill-title {
-  font-weight: 600;
-  margin-bottom: 0.3rem;
-  color: var(--secondary-color);
-}
-
-.skill-bar {
-  width: 70%;
-  height: 8px;
-  border-radius: 4px;
-  background-color: var(--secondary-color);
-  position: relative;
-  overflow: hidden;
-}
-
-.skill-progress {
-  position: absolute;
-  height: 100%;
-  width: 0%;
-  top: 0;
-  left: 0;
-  background-color: var(--primary-color-dark);
-  transition: 1s;
-}
-
-.about .column-1 {
-  position: relative;
-}
-
-.about .column-1:before {
-  content: "About";
-  position: absolute;
-  font-size: 8rem;
-  font-weight: 800;
-  color: var(--secondary-color);
-  opacity: 0.04;
-  top: 20px;
-  left: 0;
-  line-height: 0;
-}
-
-.about .points {
-  width: 300px;
-  top: 65%;
-  left: 80%;
-  opacity: 0.1;
-}
-
+/* 
 .contact {
-  position: relative;
   width: 100%;
-  padding: 0px;
+
 }
 
 .contact:before,
@@ -432,13 +369,12 @@ ul li a:hover {
 }
 
 .contact-box {
-  width: 100%;
+  width: 50%;
   background-color: var(--light-one);
-  width: 100%;
   border-radius: 45px;
-  padding: 5.5rem 4.5rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  padding: 1.5rem 1.5rem;
+  display: block;
+  grid-template-rows: repeat(2, 1fr);
 }
 
 .contact-info {
@@ -536,6 +472,86 @@ ul li a:hover {
 
 .contact-input .btn {
   margin-top: 0.6rem;
+} */
+
+#contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  grid-gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-section {
+  background: #1d1d1d;
+  font-weight: 600;
+  /* border: 1px solid #cfb290; */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.pbold{
+color: var(--secondary-color);
+font-weight: 650;
+}
+
+#form-container {
+  order: 1;
+}
+
+#details-container {
+  order: 2;
+}
+
+input, textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #cfb290;
+  border-radius: 5px;
+  background: #1d1d1d;
+  color: var(--extra-light);
+  font-weight: 600;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+  border-color: rgb(149, 105, 67);
+}
+
+.send {
+  width: 20%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: rgb(149, 105, 67);
+  color:var(--extra-light);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.send button :hover {
+  background:var(--primary-color-dark);
+  border: 1px solid var(--primary-color);
+  font-weight: 600;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+@media (max-width: 600px) {
+  #contact-container {
+      grid-template-columns: 1fr;
+  }
+
+  #form-container, #details-container {
+      order: unset;
+  }
 }
 
 #projects {
@@ -555,7 +571,7 @@ ul li a:hover {
   font-size: 2.5rem;
   text-align: center;
   color: var(--primary-color);
-  margin-bottom: 50px;
+  margin-bottom: 5px;
 }
 #projects .all-projects {
   color: var(--primary-color);
@@ -570,7 +586,7 @@ ul li a:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
   margin: 20px auto;
   overflow: hidden;
   border-radius: 10px;
@@ -593,16 +609,18 @@ ul li a:hover {
   color: var(--primary-color);
   font-size: 1.8rem;
   font-weight: 500;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 #projects .project-info p {
   color: var(--text-light);
 }
 #projects .project-img {
   flex-basis: 50%;
-  height: 200px;
+  height: 250px;
   overflow: hidden;
   position: relative;
+  width: min(35rem, 90%);
+  border-radius: 2%;
   border: 2px solid;
 }
 #projects .project-img:after {
@@ -630,7 +648,7 @@ footer {
   background-color: var(--secondary-color);
   height: auto;
   width: 100vw;
-  font-family: "Open Sans";
+  font-family: "poppins";
   padding-top: 10px;
   color: var(--text-light);
 }
@@ -694,4 +712,239 @@ footer {
 .footer-bottom span {
   opacity: 0.5;
   font-weight: 300;
+} 
+
+
+
+h1,
+h2,
+h3,
+h4 {
+  color: rgb(149, 105, 67);
+}
+
+
+.containerabout {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.tabs {
+ font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 80px;
+  position: relative;
+  cursor: pointer;
+}
+
+.tab {
+  position: relative;
+  z-index: 1;
+}
+
+.tab:hover::after {
+  width: 100%;
+}
+
+.tab::after {
+  content: "     ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: rgb(149, 105, 67);
+  transition: width 0.3s ease;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  padding-bottom: 50px;
+}
+
+.tab {
+  border-color: rgb(149, 105, 67);
+position: relative;
+z-index: 1;
+cursor: pointer;
+padding: 10px 20px; /* Added padding for better clickability */
+border: 2px solid; /* Added a transparent border */
+border-radius: 8px;
+}
+
+.tab:hover {
+border-color: rgb(149, 105, 67); /* Change border color on hover */
+}
+
+.tab.active {
+background-color: rgb(149, 105, 67);
+color: #1d1d1d;
+}
+
+.skills-grid {
+  border-radius: 8px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  font-size: 10px;
+}
+
+.skills-block {
+  height:auto;
+  background-color: #cfb290;
+  color: #1d1d1d;
+  padding: 10px;
+  border-radius: 40px;
+  text-align: center;
+  margin-bottom: 5px;
+
+  /* Added margin to create space between blocks */
+}
+
+.skills-block i {
+  padding-top: 10px;
+  font-size: 40px;
+  color: #1d1d1d;
+  margin-bottom: 5px;
+  display: block;
+}
+
+
+.skills-grid :hover {
+  transition: 0.3s ease;
+  transform: translateY(-5px);
+}
+
+
+.subpoints {
+font-size: 10px;
+font-weight: 600;
+padding:10px;
+  display:flow-root;
+}
+
+.subpoints li::before {
+  background-color: #1d1d1d;
+  color: #cfb290;
+  display: inline-block;
+  padding-top: 50px;
+  width: 1rem;
+  margin-left: -1rem;
+}
+
+.info {
+  padding-top: 15px;
+}
+
+.about1,
+.insights {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0px;
+  box-sizing: border-box;
+  text-align: justify;
+  padding-bottom: 10px;
+}
+
+.nut {
+  padding-bottom: 15px;
+}
+
+.mod {
+  padding-top: 25px;
+}
+
+@media screen and (max-width: 900px) {
+  .skills-block .subpoints {
+      display:contents;
+      font-size: 20px;
+      font-weight: 550;
+  }
+
+  .skills-block{
+    font-size: 25px;
+    vertical-align: middle;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .skills-grid {
+    display: grid;
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-columns: repeat(1, 1fr);
+      /* width:auto;
+     justify-content: center;
+      align-items:center;
+      text-align: center; */
+      padding-inline: 50px;
+  
+  }
+
+  .skills-block{
+    font-size: 20px;
+    vertical-align: middle;
+    padding: 10px;
+  }
+
+  .skills-block li{
+    font-size: 20px;
+    font-weight: 550;
+  }
+
+  .project-img {
+    width: min(15rem, 80%);
+  }
+}
+
+.about1 p, .info{
+  color: var(--text-light);
+}
+
+.nut1, .mod1{
+  color: var(--text-light);
+}
+
+
+@media screen and (min-width: 500px) {
+  .skills-grid {
+    display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      /* width:auto;
+     justify-content: center;
+      align-items:center;
+      text-align: center; */
+      padding-inline: 20px;
+  
+  }
+
+  .skills-block{
+    font-size: 20px;
+    vertical-align: middle;
+    padding: 10px;
+  }
+
+  .skills-block li{
+    font-size: 18px;
+    font-weight: 550;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .skills-grid {
+    display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+
+      padding-inline: 20px;
+  }
 }
